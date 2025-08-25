@@ -1,0 +1,154 @@
+/* ====== Estilos base ====== */
+body {
+  font-family: "Delius", cursive;
+  font-size: 1.3rem; 
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  background-color: #FFF0F5;
+  color: #333;
+}
+
+/* ====== Encabezado con capas ====== */
+.header-banner {
+  position: relative;
+  display: inline-block;
+  margin: 20px 0;
+}
+
+.header-banner .caritas {
+  width: 100%;
+  max-width: 500px;
+  display: block;
+  margin: auto;
+  opacity: 0.9; /* un poco transparente para resaltar logo */
+}
+
+.header-banner .logo {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  max-width: 100px;
+}
+
+h1, h2 {
+  color: #d624c4;
+  font-size: 3rem; /* tamaño grande para h1 */
+}
+
+
+a {
+  text-decoration: none;
+}
+
+/* Fondo con imagen semitransparente */
+body {
+  position: relative; /* necesario para el ::before */
+  background-color: #fdfaf5; /* beige muy pálido como capa base */
+  font-family: "Delius", cursive;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  color: #333;
+}
+
+/* Capa del banner detrás del contenido */
+body::before {
+  content: "";
+  position: fixed; /* cubre toda la pantalla incluso si haces scroll */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: url("images/banner.jpg") no-repeat center center;
+  background-size: cover; /* ajusta la imagen */
+  opacity: 0.10; /* 10% de opacidad */
+  z-index: -1; /* se queda atrás del texto */
+}
+
+
+/* ====== Sección intro ====== */
+.intro {
+  padding: 20px;
+  max-width: 900px;
+  margin: auto;
+}
+
+/* ====== Enlaces principales ====== */
+.links {
+  padding: 20px;
+}
+
+.links a {
+  display: inline-block;
+  margin: 8px 12px;
+  padding: 10px 15px;
+  color: black;
+  background-color: #F7BFBE;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+}
+
+.links a:hover {
+  background-color: #d624c4;
+}
+
+/* ====== Carrusel ====== */
+.carousel img {
+  max-width: 100%;
+  height: auto;
+  margin: 20px 0;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+/* ====== Footer ====== */
+footer {
+  padding: 20px;
+  background-color: #F7BFBE;
+}
+
+.social-icons img {
+  width: 40px;
+  height: 40px;
+  margin: 0 10px;
+  transition: transform 0.2s;
+  color: #d624c4;
+}
+
+.social-icons img:hover {
+  transform: scale(1.1);
+}
+
+/* ====== Diseño responsive ====== */
+
+/* Tablets */
+@media (max-width: 768px) {
+  .links a {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+  }
+}
+
+/* Móviles */
+@media (max-width: 480px) {
+  .logo {
+    max-width: 140px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  .intro {
+    padding: 15px;
+  }
+
+  .social-icons img {
+    width: 32px;
+    height: 32px;
+  }
+}
